@@ -10,6 +10,7 @@ import { registerSoundfonts } from '@strudel/soundfonts';
 import { stranger_tune } from './tunes';
 import console_monkey_patch, { getD3Data } from './console-monkey-patch';
 import ProcessInput from "./components/ProcessInput";
+import ProcessOutput from "./components/ProcessOutput";
 
 let globalEditor = null;
 
@@ -130,8 +131,7 @@ return (
                 </div>
                 <div className="row">
                     <div className="col-md-8" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
-                        <div id="editor" />
-                        <div id="output" />
+                        <ProcessOutput/>
                     </div>
                     <div className="col-md-4">
                         <div className="form-check">
