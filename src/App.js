@@ -11,6 +11,7 @@ import { stranger_tune } from './tunes';
 import console_monkey_patch, { getD3Data } from './console-monkey-patch';
 import ProcessInput from "./components/ProcessInput";
 import ProcessOutput from "./components/ProcessOutput";
+import ProcessButtons from "./components/ProcessButtons";
 
 let globalEditor = null;
 
@@ -121,8 +122,7 @@ return (
                     <div className="col-md-4">
 
                         <nav>
-                            <button id="process" className="btn btn-outline-primary">Preprocess</button>
-                            <button id="process_play" className="btn btn-outline-primary">Proc & Play</button>
+                            <ProcessButtons/>
                             <br />
                             <button id="play" className="btn btn-outline-primary">Play</button>
                             <button id="stop" className="btn btn-outline-primary">Stop</button>
