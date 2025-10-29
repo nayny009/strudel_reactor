@@ -12,6 +12,7 @@ import console_monkey_patch, { getD3Data } from './console-monkey-patch';
 import ProcessInput from "./components/ProcessInput";
 import ProcessOutput from "./components/ProcessOutput";
 import ProcessButtons from "./components/ProcessButtons";
+import PlaybackButtons from "./components/PlaybackButtons";
 
 let globalEditor = null;
 
@@ -124,8 +125,7 @@ return (
                         <nav>
                             <ProcessButtons/>
                             <br />
-                            <button id="play" className="btn btn-outline-primary">Play</button>
-                            <button id="stop" className="btn btn-outline-primary">Stop</button>
+                            <PlaybackButtons/>
                         </nav>
                     </div>
                 </div>
