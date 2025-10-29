@@ -14,6 +14,7 @@ import ProcessOutput from "./components/ProcessOutput";
 import ProcessButtons from "./components/ProcessButtons";
 import PlaybackButtons from "./components/PlaybackButtons";
 import DJControls from "./components/DJControls";
+import PageTitle from "./components/PageTitle";
 
 let globalEditor = null;
 
@@ -113,16 +114,14 @@ useEffect(() => {
 
 return (
     <div>
-        <h2>Strudel Demo</h2>
+        <PageTitle/>
         <main>
-
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-8" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
                         <ProcessInput/>
                     </div>
                     <div className="col-md-4">
-
                         <nav>
                             <ProcessButtons/>
                             <br />
