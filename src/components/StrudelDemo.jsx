@@ -75,15 +75,15 @@ export default function StrudelDemo() {
 
 
     return (
-        <div>
+        <div className="main-wrapper">
             <PageTitle />
             <main>
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-md-8" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
+                        <div className="col-md-6" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
                             <ProcessInput defaultValue={songText} onChange={(e) => setSongText(e.target.value)} />
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-6">
                             <nav>
                                 <ProcessButtons />
                                 <br />
@@ -92,16 +92,16 @@ export default function StrudelDemo() {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-8" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
+                        <div className="col-md-6" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
                             <ProcessOutput />
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-6">
                             <DJControls />
                         </div>
                     </div>
                 </div>
                 <canvas id="roll"></canvas>
-            </main >
-        </div >
+            </main>
+        </div>
     );
 }
