@@ -80,23 +80,36 @@ export default function StrudelDemo() {
             <main>
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-md-6" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
-                            <ProcessInput defaultValue={songText} onChange={(e) => setSongText(e.target.value)} />
+                        <div className="col-md-7">
+                            <div className="box">
+                                <div className="box-scroll">
+                                    <ProcessInput defaultValue={songText} onChange={(e) => setSongText(e.target.value)} />
+                                </div>
+                            </div>
                         </div>
-                        <div className="col-md-6">
-                            <nav>
-                                <ProcessButtons />
-                                <br />
-                                <PlaybackButtons onPlay={handlePlay} onStop={handleStop} />
-                            </nav>
+                        <div className="col-md-5">
+                            <div className="box">
+                                <nav>
+                                    <ProcessButtons />
+                                    <br />
+                                    <PlaybackButtons onPlay={handlePlay} onStop={handleStop} />
+                                </nav>
+                            </div>
                         </div>
                     </div>
+                    <br/>
                     <div className="row">
-                        <div className="col-md-6" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
-                            <ProcessOutput />
+                        <div className="col-md-7">
+                            <div className="box">
+                                <div className="box-scroll">
+                                    <ProcessOutput />
+                                </div>
+                            </div>
                         </div>
-                        <div className="col-md-6">
-                            <DJControls />
+                        <div className="col-md-5">
+                            <div className="box">
+                                <DJControls />
+                            </div>
                         </div>
                     </div>
                 </div>
