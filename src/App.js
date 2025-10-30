@@ -22,22 +22,7 @@ const handleD3Data = (event) => {
     console.log(event.detail);
 };
 
-export function SetupButtons() {
 
-    document.getElementById('play').addEventListener('click', () => globalEditor.evaluate());
-    document.getElementById('stop').addEventListener('click', () => globalEditor.stop());
-    document.getElementById('process').addEventListener('click', () => {
-        Proc()
-    }
-    )
-    document.getElementById('process_play').addEventListener('click', () => {
-        if (globalEditor != null) {
-            Proc()
-            globalEditor.evaluate()
-        }
-    }
-    )
-}
 
 
 
@@ -69,7 +54,15 @@ export function ProcessText(match, ...args) {
 
 export default function StrudelDemo() {
 
-const hasRun = useRef(false);
+    const hasRun = useRef(false);
+
+    const handlePlay = () => {
+        globalEditor.evaluate()
+    }
+
+    const handleStop = () => {
+        globalEditor.stop()
+    }
 
 useEffect(() => {
 
@@ -105,7 +98,6 @@ useEffect(() => {
             });
             
         document.getElementById('proc').value = stranger_tune
-        SetupButtons()
         Proc()
     }
 
@@ -125,7 +117,7 @@ return (
                         <nav>
                             <ProcessButtons/>
                             <br />
-                            <PlaybackButtons/>
+                            <PlaybackButtons onPlay={handlePlay} onStop={handleStop} />
                         </nav>
                     </div>
                 </div>
