@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { StrudelMirror } from '@strudel/codemirror';
 import { evalScope } from '@strudel/core';
 import { drawPianoroll } from '@strudel/draw';
@@ -22,36 +22,6 @@ const handleD3Data = (event) => {
     console.log(event.detail);
 };
 
-
-
-
-
-export function ProcAndPlay() {
-    if (globalEditor != null && globalEditor.repl.state.started == true) {
-        console.log(globalEditor)
-        Proc()
-        globalEditor.evaluate();
-    }
-}
-
-export function Proc() {
-
-    let proc_text = document.getElementById('proc').value
-    let proc_text_replaced = proc_text.replaceAll('<p1_Radio>', ProcessText);
-    ProcessText(proc_text);
-    globalEditor.setCode(proc_text_replaced)
-}
-
-export function ProcessText(match, ...args) {
-
-    let replace = ""
-    if (document.getElementById('flexRadioDefault2').checked) {
-        replace = "_"
-    }
-
-    return replace
-}
-
 export default function StrudelDemo() {
 
     const hasRun = useRef(false);
@@ -63,6 +33,8 @@ export default function StrudelDemo() {
     const handleStop = () => {
         globalEditor.stop()
     }
+
+    const [songText, setSongText] = useState(stranger_tune)
 
 useEffect(() => {
 
@@ -98,10 +70,9 @@ useEffect(() => {
             });
             
         document.getElementById('proc').value = stranger_tune
-        Proc()
     }
-
-}, []);
+    globalEditor.setCode(songText);
+}, [songText]);
 
 
 return (
@@ -111,7 +82,7 @@ return (
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-8" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
-                        <ProcessInput/>
+                        <ProcessInput defaultValue={songText} onChange={(e) => setSongText(e.target.value)} />
                     </div>
                     <div className="col-md-4">
                         <nav>
@@ -126,7 +97,7 @@ return (
                         <ProcessOutput/>
                     </div>
                     <div className="col-md-4">
-                        <DJControls ProcAndPlay={ProcAndPlay}/>
+                        <DJControls/>
                     </div>
                 </div>
             </div>
