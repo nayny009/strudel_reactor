@@ -11,8 +11,7 @@ import { stranger_tune } from '../tunes';
 import console_monkey_patch, { getD3Data } from '../console-monkey-patch';
 import ProcessInput from "./ProcessInput";
 import ProcessOutput from "./ProcessOutput";
-import ProcessButtons from "./ProcessButtons";
-import PlaybackButtons from "./PlaybackButtons";
+import ButtonControls from "./ButtonControls";
 import DJControls from "./DJControls";
 import PageTitle from "./PageTitle";
 
@@ -81,35 +80,19 @@ export default function StrudelDemo() {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-md-7">
-                            <div className="box">
-                                <div className="box-scroll">
-                                    <ProcessInput defaultValue={songText} onChange={(e) => setSongText(e.target.value)} />
-                                </div>
-                            </div>
+                            <ProcessInput defaultValue={songText} onChange={(e) => setSongText(e.target.value)} />
                         </div>
                         <div className="col-md-5">
-                            <div className="box">
-                                <nav>
-                                    <ProcessButtons />
-                                    <br />
-                                    <PlaybackButtons onPlay={handlePlay} onStop={handleStop} />
-                                </nav>
-                            </div>
+                            <ButtonControls onPlay={handlePlay} onStop={handleStop} />
                         </div>
                     </div>
                     <br/>
                     <div className="row">
                         <div className="col-md-7">
-                            <div className="box">
-                                <div className="box-scroll">
-                                    <ProcessOutput />
-                                </div>
-                            </div>
+                            <ProcessOutput />
                         </div>
                         <div className="col-md-5">
-                            <div className="box">
-                                <DJControls />
-                            </div>
+                            <DJControls />
                         </div>
                     </div>
                 </div>

@@ -1,8 +1,12 @@
 function ProcessInput({ defaultValue, onChange }) {
   return (
       <>
-          <label htmlFor="exampleFormControlTextarea1" className="form-label">Text to preprocess:</label>
-          <textarea className="form-control" rows="15" id="proc" defaultValue={defaultValue} onChange={onChange}></textarea>
+          <div className="box">
+              <h3>Text to Preprocess</h3>
+              <div className="box-scroll">
+                  <textarea className="form-control" rows="15" id="proc" defaultValue={defaultValue} onChange={onChange}></textarea>
+              </div>
+          </div>
       </>
   );
 }
