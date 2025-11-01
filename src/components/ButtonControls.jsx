@@ -6,11 +6,12 @@ function ButtonControls({ onPlay, onStop }) {
       <>
           <div className="box">
               <h3>Playback Controls</h3>
-              <nav>
+              <div className="process-buttons">
                   <ProcessButtons />
-                  <br />
+              </div>
+              <div className="playback-buttons">
                   <PlaybackButtons onPlay={onPlay} onStop={onStop} />
-              </nav>
+              </div>              
           </div>
       </>
   );

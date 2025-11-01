@@ -87,3 +87,30 @@
     color: #7EA16B;
     margin-bottom: 15px;
 }
+
+.box .btn-green {
+    color: #95B783;
+    border: 1px solid #C3D898;
+    padding: 12px 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.6);
+}
+
+.box .btn-green:hover {
+    background-color: #CFE0AC;
+    border-color: #CFE0AC;
+}
+
+.process-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.playback-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
