@@ -3,18 +3,17 @@ function DJControls({ ProcAndPlay }) {
       <>
           <div className="box">
               <h3>DJ Controls</h3>
-              <div className="form-check">
-                  <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onChange={ProcAndPlay} defaultChecked />
-                  <label className="form-check-label" htmlFor="flexRadioDefault1">
-                      p1: ON
-                  </label>
+              <div className="dj-buttons">
+              <input className="btn-check" type="radio" name="options" id="p1-on" autoComplete="off" onChange={ProcAndPlay} defaultChecked/>
+              <label className="btn btn-green" htmlFor="p1-on">
+                  ON
+              </label>
+              <input className="btn-check" type="radio" name="options" id="p2-hush" autoComplete="off" onChange={ProcAndPlay} />
+              <label className="btn btn-green" htmlFor="p2-hush">
+                  HUSH
+              </label>
               </div>
-              <div className="form-check">
-                  <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onChange={ProcAndPlay} />
-                  <label className="form-check-label" htmlFor="flexRadioDefault2">
-                      p1: HUSH
-                  </label>
-              </div>
+              
           </div>
       </>
   );
