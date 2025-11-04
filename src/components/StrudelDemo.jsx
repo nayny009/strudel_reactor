@@ -35,6 +35,8 @@ export default function StrudelDemo() {
 
     const [songText, setSongText] = useState(stranger_tune)
 
+    const [cpm, setCpm] = useState(120);
+
     useEffect(() => {
 
         if (!hasRun.current) {
@@ -69,9 +71,9 @@ export default function StrudelDemo() {
             });
             document.getElementById('proc').value = stranger_tune
         }
-        globalEditor.setCode(songText);
-    }, [songText]);
-
+        const updatedSongText = `setcpm(${cpm})\n${songText}`;
+        globalEditor.setCode(updatedSongText);
+    }, [songText, cpm]);
 
     return (
         <div className="main-wrapper">
@@ -92,7 +94,7 @@ export default function StrudelDemo() {
                             <ProcessOutput />
                         </div>
                         <div className="col-md-5">
-                            <DJControls />
+                            <DJControls cpm={cpm} setCpm={setCpm} />
                         </div>
                     </div>
                 </div>
