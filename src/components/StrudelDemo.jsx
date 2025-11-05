@@ -35,7 +35,23 @@ export default function StrudelDemo() {
 
     const [songText, setSongText] = useState(stranger_tune)
 
+    const [state, setState] = useState("stop");
+
     const [cpm, setCpm] = useState(120);
+
+    useEffect(() => {
+        if (globalEditor && cpm && !isNaN(cpm)) {
+            const updatedSongText = `setcpm(${cpm})\n${songText}`;
+            globalEditor.setCode(updatedSongText);
+        }
+    }, [songText, cpm]);
+
+    useEffect(() => {
+        if (state === "play") {
+            globalEditor.evaluate(`setcpm(${cpm})`);
+        }
+    }, [cpm])
+
 
     useEffect(() => {
 
@@ -85,7 +101,7 @@ export default function StrudelDemo() {
                             <ProcessInput defaultValue={songText} onChange={(e) => setSongText(e.target.value)} />
                         </div>
                         <div className="col-md-5">
-                            <ButtonControls onPlay={handlePlay} onStop={handleStop} />
+                            <ButtonControls onPlay={() => { setState("play"); handlePlay() }} onStop={() => { setState("stop"); handleStop() }} />
                         </div>
                     </div>
                     <br/>
