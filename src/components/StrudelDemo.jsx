@@ -37,21 +37,24 @@ export default function StrudelDemo() {
 
     const [state, setState] = useState("stop");
 
-    const [cpm, setCpm] = useState(120);
+    const [cpm, setCpm] = useState(30);
+
+    const [volume, setVolume] = useState(0.5);
 
     useEffect(() => {
         if (globalEditor && cpm && !isNaN(cpm)) {
-            const updatedSongText = `setcpm(${cpm})\n${songText}`;
+            const updatedSongText = `setcpm(${cpm})\ngain(${volume})\n${songText}`;
+            //const updatedSongText = `setcpm(${cpm})\nall(x => x.gain(${volume}))\n${songText}`;
             globalEditor.setCode(updatedSongText);
         }
-    }, [songText, cpm]);
+    }, [songText, cpm, volume]);
 
     useEffect(() => {
         if (state === "play") {
             globalEditor.evaluate(`setcpm(${cpm})`);
+            globalEditor.evaluate(`gain(${volume})`);
         }
-    }, [cpm])
-
+    })
 
     useEffect(() => {
 
@@ -87,9 +90,10 @@ export default function StrudelDemo() {
             });
             document.getElementById('proc').value = stranger_tune
         }
-        const updatedSongText = `setcpm(${cpm})\n${songText}`;
+        const updatedSongText = `setcpm(${cpm})\ngain(${volume})\n${songText}`;
+        //const updatedSongText = `setcpm(${cpm})\nall(x => x.gain(${volume}))\n${songText}`;
         globalEditor.setCode(updatedSongText);
-    }, [songText, cpm]);
+    }, [songText, cpm, volume]);
 
     return (
         <div className="main-wrapper">
@@ -110,7 +114,7 @@ export default function StrudelDemo() {
                             <ProcessOutput />
                         </div>
                         <div className="col-md-5">
-                            <DJControls cpm={cpm} setCpm={setCpm} />
+                            <DJControls cpm={cpm} setCpm={setCpm} volume={volume} setVolume={setVolume} />
                         </div>
                     </div>
                 </div>
