@@ -142,3 +142,7 @@
 .volume-slider {
     color: #95B783;
 }
+
+.instruments button {
+    width: 100%;
+}
