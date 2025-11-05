@@ -14,6 +14,7 @@ import ProcessOutput from "./ProcessOutput";
 import ButtonControls from "./ButtonControls";
 import DJControls from "./DJControls";
 import PageTitle from "./PageTitle";
+import { Preprocess } from "../util/Preprocess";
 
 let globalEditor = null;
 
@@ -43,18 +44,16 @@ export default function StrudelDemo() {
 
     useEffect(() => {
         if (globalEditor && cpm && !isNaN(cpm)) {
-            const updatedSongText = `setcpm(${cpm})\ngain(${volume})\n${songText}`;
-            //const updatedSongText = `setcpm(${cpm})\nall(x => x.gain(${volume}))\n${songText}`;
+            const updateCpm = `setcpm(${cpm})\n`;
+            let updateVolume = Preprocess({ inputText: songText, volume: volume })
+            const updatedSongText = "" + updateCpm + updateVolume;
             globalEditor.setCode(updatedSongText);
-        }
-    }, [songText, cpm, volume]);
 
-    useEffect(() => {
-        if (state === "play") {
-            globalEditor.evaluate(`setcpm(${cpm})`);
-            globalEditor.evaluate(`gain(${volume})`);
+            if (state === "play") {
+                handlePlay();
+            }
         }
-    })
+    }, [state, songText, cpm, volume]);
 
     useEffect(() => {
 
@@ -90,10 +89,9 @@ export default function StrudelDemo() {
             });
             document.getElementById('proc').value = stranger_tune
         }
-        const updatedSongText = `setcpm(${cpm})\ngain(${volume})\n${songText}`;
-        //const updatedSongText = `setcpm(${cpm})\nall(x => x.gain(${volume}))\n${songText}`;
+        const updatedSongText = `setcpm(${cpm})\n${songText}`;
         globalEditor.setCode(updatedSongText);
-    }, [songText, cpm, volume]);
+    }, [songText, cpm]);
 
     return (
         <div className="main-wrapper">
