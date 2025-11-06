@@ -11,8 +11,8 @@ import { stranger_tune } from '../tunes';
 import console_monkey_patch, { getD3Data } from '../console-monkey-patch';
 import ProcessInput from "./ProcessInput";
 import ProcessOutput from "./ProcessOutput";
-import ButtonControls from "./ButtonControls";
-import DJControls from "./DJControls";
+import ButtonControls from "./playback-controls/ButtonControls";
+import DJControls from "./dj-controls/DJControls";
 import PageTitle from "./PageTitle";
 import { Preprocess } from "../util/Preprocess";
 
