@@ -1,16 +1,34 @@
+import Swal from "sweetalert2";
 
 function SaveLoadButtons({ songText, setSongText, cpm, setCpm, volume, setVolume }) {
     async function saveJson() {
         const data = { songText, cpm, volume };
         const dataString = JSON.stringify(data);
 
-        const fileName = prompt("Enter a name for your preset:");
+        const { value: name } = await Swal.fire({
+            title: "Save Preset",
+            input: "text",
+            inputLabel: "Enter a name for your preset",
+            confirmButtonText: "Save",
+            showCancelButton: true,
+            inputValidator: (value) => {
+                if (!value) {
+                    return "Please enter a preset name!";
+                }
+            },
+            confirmButtonColor: "green",
+            cancelButtonColor: "red"
+        });
 
-        if (fileName) {
-            localStorage.setItem(`${fileName}_JSON`, dataString);
-            alert(`Preset ${fileName} has been saved!`);
+        if (name) {
+            localStorage.setItem(`${name}_JSON`, dataString);
+            Swal.fire({
+                title: "Saved!",
+                text: `Your preset "${name}" has been saved!`,
+                icon: "success",
+                confirmButtonColor: "green"
+            });
         }
-
     }
 
     async function loadJson() {
