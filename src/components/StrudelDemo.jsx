@@ -103,7 +103,9 @@ export default function StrudelDemo() {
                             <ProcessInput defaultValue={songText} onChange={(e) => setSongText(e.target.value)} />
                         </div>
                         <div className="col-md-5">
-                            <ButtonControls onPlay={() => { setState("play"); handlePlay() }} onStop={() => { setState("stop"); handleStop() }} />
+                            <ButtonControls onPlay={() => { setState("play"); handlePlay() }} onStop={() => { setState("stop"); handleStop() }}
+                                cpm={cpm} setCpm={setCpm} volume={volume} setVolume={setVolume}
+                            />
                         </div>
                     </div>
                     <br/>
@@ -112,7 +114,7 @@ export default function StrudelDemo() {
                             <ProcessOutput />
                         </div>
                         <div className="col-md-5">
-                            <DJControls cpm={cpm} setCpm={setCpm} volume={volume} setVolume={setVolume} />
+                            <DJControls />
                         </div>
                     </div>
                 </div>
