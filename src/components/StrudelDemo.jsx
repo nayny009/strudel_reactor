@@ -105,6 +105,7 @@ export default function StrudelDemo() {
                         <div className="col-md-5">
                             <ButtonControls onPlay={() => { setState("play"); handlePlay() }} onStop={() => { setState("stop"); handleStop() }}
                                 cpm={cpm} setCpm={setCpm} volume={volume} setVolume={setVolume}
+                                songText={songText} setSongText={setSongText}
                             />
                         </div>
                     </div>

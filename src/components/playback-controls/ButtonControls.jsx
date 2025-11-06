@@ -4,7 +4,7 @@ import SaveLoadButtons from "./SaveLoadButtons";
 import VolumeSlider from "./VolumeSlider";
 import CpmInput from "./CpmInput";
 
-function ButtonControls({ onPlay, onStop, cpm, setCpm, volume, setVolume }) {
+function ButtonControls({ onPlay, onStop, cpm, setCpm, volume, setVolume, songText, setSongText }) {
   return (
       <>
           <div className="box">
@@ -22,7 +22,9 @@ function ButtonControls({ onPlay, onStop, cpm, setCpm, volume, setVolume }) {
                   <VolumeSlider volume={volume} setVolume={setVolume} />
               </div>
               <div className="saveload-buttons">
-                  <SaveLoadButtons />
+                  <SaveLoadButtons cpm={cpm} setCpm={setCpm}
+                      volume={volume} setVolume={setVolume}
+                      songText={songText} setSongText={setSongText} />
               </div>
           </div>
       </>
