@@ -32,7 +32,50 @@ function SaveLoadButtons({ songText, setSongText, cpm, setCpm, volume, setVolume
     }
 
     async function loadJson() {
+        const keys = Object.keys(localStorage).filter(key => key.endsWith("_JSON"));
+        const presets = keys.map(key => key.replace("_JSON", ""));
 
+        if (presets.length === 0) {
+            Swal.fire({
+                title: "No Presets",
+                text: "You have no saved presets yet!",
+                icon: "info",
+                confirmButtonColor: "green"
+            });
+            return;
+        }
+
+        const inputOptions = presets.reduce((obj, preset) => {
+            obj[preset] = preset;
+            return obj;
+        }, {});
+
+        const { value: selectedPreset } = await Swal.fire({
+            title: "Load Preset",
+            input: "select",
+            inputOptions: inputOptions,
+            inputPlaceholder: "Select a preset",
+            confirmButtonText: "Load",
+            confirmButtonColor: "green",
+            showCancelButton: true,
+            cancelButtonColor: "red"
+        });
+
+        if (selectedPreset) {
+            const dataString = localStorage.getItem(`${selectedPreset}_JSON`);
+            const data = JSON.parse(dataString);
+
+            setSongText(data.songText);
+            setCpm(data.cpm);
+            setVolume(data.volume);
+
+            Swal.fire({
+                title: "Loaded!",
+                text: `Preset "${selectedPreset}" has been loaded!`,
+                icon: "success",
+                confirmButtonColor: "green"
+            });
+        }
     }
 
     return (
