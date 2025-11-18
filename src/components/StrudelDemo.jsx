@@ -35,6 +35,30 @@ export default function StrudelDemo() {
         globalEditor.stop()
     }
 
+    const toggleHush = (instrumentName, hush) => {
+        setSongText(prev => {
+            const lines = prev.split("\n");
+
+            // Iterates through all the song text.
+            for (let i = 0; i < lines.length; i++) {
+                const trimmed = lines[i].trim();
+
+                // Finds the line with the instrument name; considers with/without "_".
+                if (trimmed.startsWith(instrumentName + ":") || trimmed.startsWith("_" + instrumentName + ":")) {
+                    if (hush) {
+                        // Adds "_".
+                        if (!lines[i].startsWith("_")) lines[i] = "_" + lines[i];
+                    } else {
+                        // Removes "_".
+                        if (lines[i].startsWith("_")) lines[i] = lines[i].slice(1);
+                    }
+                    break;
+                }
+            }
+            return lines.join("\n");
+        });
+    };
+
     const [songText, setSongText] = useState(stranger_tune)
 
     const [state, setState] = useState("stop");
@@ -124,7 +148,7 @@ export default function StrudelDemo() {
                             <ProcessOutput />
                         </div>
                         <div className="col-md-5">
-                            <DJControls />
+                            <DJControls toggleHush={toggleHush} />
                         </div>
                     </div>
                     <br />

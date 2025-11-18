@@ -1,13 +1,11 @@
-import InstrumentSounds from "./InstrumentSounds";
 import OnHushButtons from "./OnHushButtons";
 
-function DJControls({ ProcAndPlay }) {
+function DJControls({ toggleHush }) {
   return (
       <>
           <div className="box">
               <h3>DJ Controls</h3>
-              {/*<OnHushButtons ProcAndPlay={ProcAndPlay} />*/}
-              <InstrumentSounds />
+              <OnHushButtons toggleHush={toggleHush} />
           </div>
       </>
   );
