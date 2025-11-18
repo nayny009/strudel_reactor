@@ -36,10 +36,10 @@ export default function StrudelDemo() {
     }
 
     const toggleHush = (instrumentName, hush) => {
-        setSongText(prev => {
+        setMusicText(prev => {
             const lines = prev.split("\n");
 
-            // Iterates through all the song text.
+            // Iterates through all the music text.
             for (let i = 0; i < lines.length; i++) {
                 const trimmed = lines[i].trim();
 
@@ -59,7 +59,7 @@ export default function StrudelDemo() {
         });
     };
 
-    const [songText, setSongText] = useState(stranger_tune)
+    const [musicText, setMusicText] = useState(stranger_tune)
 
     const [state, setState] = useState("stop");
 
@@ -70,15 +70,15 @@ export default function StrudelDemo() {
     useEffect(() => {
         if (globalEditor && cpm && !isNaN(cpm)) {
             const updateCpm = `setcpm(${cpm})\n`;
-            let updateVolume = Preprocess({ inputText: songText, volume: volume })
-            const updatedSongText = "" + updateCpm + updateVolume;
-            globalEditor.setCode(updatedSongText);
+            let updateVolume = Preprocess({ inputText: musicText, volume: volume })
+            const updatedMusicText = "" + updateCpm + updateVolume;
+            globalEditor.setCode(updatedMusicText);
 
             if (state === "play") {
                 handlePlay();
             }
         }
-    }, [state, songText, cpm, volume]);
+    }, [state, musicText, cpm, volume]);
 
     useEffect(() => {
 
@@ -122,9 +122,9 @@ export default function StrudelDemo() {
             });
             document.getElementById('proc').value = stranger_tune
         }
-        const updatedSongText = `setcpm(${cpm})\n${songText}`;
-        globalEditor.setCode(updatedSongText);
-    }, [songText, cpm]);
+        const updatedMusicText = `setcpm(${cpm})\n${musicText}`;
+        globalEditor.setCode(updatedMusicText);
+    }, [musicText, cpm]);
 
     return (
         <div className="main-wrapper">
@@ -133,12 +133,12 @@ export default function StrudelDemo() {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-md-7">
-                            <ProcessInput defaultValue={songText} onChange={(e) => setSongText(e.target.value)} />
+                            <ProcessInput defaultValue={musicText} onChange={(e) => setMusicText(e.target.value)} />
                         </div>
                         <div className="col-md-5">
                             <ButtonControls onPlay={() => { setState("play"); handlePlay() }} onStop={() => { setState("stop"); handleStop() }}
                                 cpm={cpm} setCpm={setCpm} volume={volume} setVolume={setVolume}
-                                songText={songText} setSongText={setSongText}
+                                musicText={musicText} setMusicText={setMusicText}
                             />
                         </div>
                     </div>

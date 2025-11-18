@@ -1,8 +1,8 @@
 import Swal from "sweetalert2";
 
-function SaveLoadButtons({ songText, setSongText, cpm, setCpm, volume, setVolume }) {
+function SaveLoadButtons({ musicText, setMusicText, cpm, setCpm, volume, setVolume }) {
     async function saveJson() {
-        const data = { songText, cpm, volume };
+        const data = { musicText, cpm, volume };
         const dataString = JSON.stringify(data);
 
         const { value: name } = await Swal.fire({
@@ -65,7 +65,7 @@ function SaveLoadButtons({ songText, setSongText, cpm, setCpm, volume, setVolume
             const dataString = localStorage.getItem(`${selectedPreset}_JSON`);
             const data = JSON.parse(dataString);
 
-            setSongText(data.songText);
+            setMusicText(data.musicText);
             setCpm(data.cpm);
             setVolume(data.volume);
 
