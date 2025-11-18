@@ -21,7 +21,7 @@ A React-based application that demonstrates the capabilities of [Strudel.cc](htt
 ## Demonstration Video
 Below is an unlisted YouTube walkthrough and demonstration of all the web application features and design choices:
 
-[Video Demonstration]()
+[Video Demonstration](https://youtu.be/uFDsVYzys0A)
 
 ## Installation & Setup
 1. Clone the repository locally through either an IDE or through using the terminal.
