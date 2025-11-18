@@ -1,0 +1,164 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\n4tha\\source\\repos\\strudel_reactor\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\strudeldemo.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\strudeldemo.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\pagetitle.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\pagetitle.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\playback-controls\\buttoncontrols.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\playback-controls\\buttoncontrols.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\playback-controls\\cpminput.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\playback-controls\\cpminput.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\playback-controls\\processbuttons.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\playback-controls\\processbuttons.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\playback-controls\\volumeslider.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\playback-controls\\volumeslider.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\playback-controls\\saveloadbuttons.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\playback-controls\\saveloadbuttons.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\dj-controls\\djcontrols.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\dj-controls\\djcontrols.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StrudelDemo.jsx",
+              "DocumentMoniker": "C:\\Users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\StrudelDemo.jsx",
+              "RelativeDocumentMoniker": "src\\components\\StrudelDemo.jsx",
+              "ToolTip": "C:\\Users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\StrudelDemo.jsx",
+              "RelativeToolTip": "src\\components\\StrudelDemo.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-11-11T10:51:59.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PageTitle.jsx",
+              "DocumentMoniker": "C:\\Users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\PageTitle.jsx",
+              "RelativeDocumentMoniker": "src\\components\\PageTitle.jsx",
+              "ToolTip": "C:\\Users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\PageTitle.jsx",
+              "RelativeToolTip": "src\\components\\PageTitle.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-11-11T10:50:33.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ButtonControls.jsx",
+              "DocumentMoniker": "C:\\Users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\playback-controls\\ButtonControls.jsx",
+              "RelativeDocumentMoniker": "src\\components\\playback-controls\\ButtonControls.jsx",
+              "ToolTip": "C:\\Users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\playback-controls\\ButtonControls.jsx",
+              "RelativeToolTip": "src\\components\\playback-controls\\ButtonControls.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-11-11T10:50:30.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CpmInput.jsx",
+              "DocumentMoniker": "C:\\Users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\playback-controls\\CpmInput.jsx",
+              "RelativeDocumentMoniker": "src\\components\\playback-controls\\CpmInput.jsx",
+              "ToolTip": "C:\\Users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\playback-controls\\CpmInput.jsx",
+              "RelativeToolTip": "src\\components\\playback-controls\\CpmInput.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-11-11T10:50:26.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProcessButtons.jsx",
+              "DocumentMoniker": "C:\\Users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\playback-controls\\ProcessButtons.jsx",
+              "RelativeDocumentMoniker": "src\\components\\playback-controls\\ProcessButtons.jsx",
+              "ToolTip": "C:\\Users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\playback-controls\\ProcessButtons.jsx",
+              "RelativeToolTip": "src\\components\\playback-controls\\ProcessButtons.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-11-11T10:50:24.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VolumeSlider.jsx",
+              "DocumentMoniker": "C:\\Users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\playback-controls\\VolumeSlider.jsx",
+              "RelativeDocumentMoniker": "src\\components\\playback-controls\\VolumeSlider.jsx",
+              "ToolTip": "C:\\Users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\playback-controls\\VolumeSlider.jsx",
+              "RelativeToolTip": "src\\components\\playback-controls\\VolumeSlider.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-11-11T10:50:23.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SaveLoadButtons.jsx",
+              "DocumentMoniker": "C:\\Users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\playback-controls\\SaveLoadButtons.jsx",
+              "RelativeDocumentMoniker": "src\\components\\playback-controls\\SaveLoadButtons.jsx",
+              "ToolTip": "C:\\Users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\playback-controls\\SaveLoadButtons.jsx",
+              "RelativeToolTip": "src\\components\\playback-controls\\SaveLoadButtons.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-11-11T10:50:22.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DJControls.jsx",
+              "DocumentMoniker": "C:\\Users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\dj-controls\\DJControls.jsx",
+              "RelativeDocumentMoniker": "src\\components\\dj-controls\\DJControls.jsx",
+              "ToolTip": "C:\\Users\\n4tha\\source\\repos\\strudel_reactor\\src\\components\\dj-controls\\DJControls.jsx",
+              "RelativeToolTip": "src\\components\\dj-controls\\DJControls.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-11-11T10:50:14.547Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

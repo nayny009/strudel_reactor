@@ -15,6 +15,7 @@ import ButtonControls from "./playback-controls/ButtonControls";
 import DJControls from "./dj-controls/DJControls";
 import PageTitle from "./PageTitle";
 import { Preprocess } from "../util/Preprocess";
+import D3Graph from "./D3Graph";
 
 let globalEditor = null;
 
@@ -74,7 +75,15 @@ export default function StrudelDemo() {
                 transpiler,
                 root: document.getElementById('editor'),
                 drawTime,
-                onDraw: (haps, time) => drawPianoroll({ haps, time, ctx: drawContext, drawTime, fold: 0 }),
+                onDraw: (haps, time) => {
+                    drawPianoroll({ haps, time, ctx: drawContext, drawTime, fold: 0 });
+                    if (haps && haps.length > 0) {
+                        // Creates array of gain values
+                        const gains = haps.map(h => h.value?.gain ?? 0);
+                        // Send gain values to listeners
+                        document.dispatchEvent(new CustomEvent("d3Data", { detail: gains }));
+                    }
+                },
                 prebake: async () => {
                     initAudioOnFirstClick(); // needed to make the browser happy (don't await this here..)
                     const loadModules = evalScope(
@@ -116,6 +125,12 @@ export default function StrudelDemo() {
                         </div>
                         <div className="col-md-5">
                             <DJControls />
+                        </div>
+                    </div>
+                    <br />
+                    <div className="row">
+                        <div className="col-md-12">
+                            <D3Graph />
                         </div>
                     </div>
                 </div>
