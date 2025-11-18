@@ -6,7 +6,7 @@ function DJControls({ ProcAndPlay }) {
       <>
           <div className="box">
               <h3>DJ Controls</h3>
-              <OnHushButtons ProcAndPlay={ProcAndPlay} />
+              {/*<OnHushButtons ProcAndPlay={ProcAndPlay} />*/}
               <InstrumentSounds />
           </div>
       </>

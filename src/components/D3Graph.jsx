@@ -44,10 +44,15 @@ export default function D3Graph() {
         svg.append("path")
             .datum(data)
             .attr("fill", "none")
-            .attr("stroke", "white")
+            .attr("stroke", "#95B783")
             .attr("stroke-width", 4)
             .attr("d", line);
     }, [data]);
 
-    return <svg width="100%" height="300px" style={{ background: "black" }} />
+    return (
+        <div className="box">
+            <h3>Gain Visualiser</h3>
+            <svg width="100%" height="275px" style={{ background: "black" }} />
+        </div>
+    );
 }

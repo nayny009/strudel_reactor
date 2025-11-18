@@ -129,12 +129,13 @@ export default function StrudelDemo() {
                     </div>
                     <br />
                     <div className="row">
-                        <div className="col-md-12">
+                        <div className="col-md-12 ">
                             <D3Graph />
                         </div>
                     </div>
+                    <br />
                 </div>
-                <canvas id="roll"></canvas>
+                <canvas id="roll" hidden></canvas>
             </main>
         </div>
     );

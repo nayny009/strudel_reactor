@@ -9,9 +9,9 @@ function ButtonControls({ onPlay, onStop, cpm, setCpm, volume, setVolume, songTe
       <>
           <div className="box">
               <h3>Playback Controls</h3>
-              <div className="process-buttons">
-                  <ProcessButtons />
-              </div>
+              {/*<div className="process-buttons">*/}
+              {/*    <ProcessButtons />*/}
+              {/*</div>*/}
               <div className="playback-buttons">
                   <PlaybackButtons onPlay={onPlay} onStop={onStop} />
               </div>
